@@ -15,19 +15,19 @@ const Register = () => {
     const handleSubmit = (e) => {
         e.preventDefault();
         if (data.name.length < 3) {
-            toast.error('Le nom doit avoir au moins 3 caractères', {
+            return toast.error('Le nom doit avoir au moins 3 caractères', {
                 position: toast.POSITION.TOP_RIGHT
             })
         }
         
         if (data.firstName.length < 3) {
-            toast.error('Le prénom doit avoir au moins 3 caractères', {
+            return toast.error('Le prénom doit avoir au moins 3 caractères', {
                 position: toast.POSITION.TOP_RIGHT
             })
         }
         
         if (data.password === data.confirmPassword) {
-            toast.error('Les mots de passe ne sont pas identique', {
+            return toast.error('Les mots de passe ne sont pas identique', {
                 position: toast.POSITION.TOP_RIGHT
             })
         }
