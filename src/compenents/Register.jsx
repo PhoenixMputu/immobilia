@@ -34,7 +34,7 @@ const Register = () => {
     }
     
     const handleChange = (e) => {
-        const {name, value} = e.target
+        const {name, value} = e.target;
         setData((prevState) => ({...prevState, [name]: value}));
         console.log(data);
     }
